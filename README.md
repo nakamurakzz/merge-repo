@@ -26,7 +26,7 @@ go run combine_files.go -dir=<repository_path> [options]
 ## Example
 
 ```
-go run combine_files.go -dir=./my-repo -out=combined.txt -ext=py,js,md -maxsize=5242880
+go run main.go -dir=./my-repo -out=combined.txt -ext=py,js,md -maxsize=5242880
 ```
 
 ## Functionality

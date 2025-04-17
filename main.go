@@ -103,7 +103,7 @@ func main() {
 func printUsage() {
 	fmt.Println("A tool to combine files from a Local repository into one")
 	fmt.Println("\nUsage:")
-	fmt.Println("  go run combine_files.go -dir=<repository_path> [options]")
+	fmt.Println("  go run main.go -dir=<repository_path> [options]")
 	fmt.Println("\nOptions:")
 	fmt.Println("  -dir string     Path to the repository(required)")
 	fmt.Println("  -out string     Path to the output file(default: \"combined_output.txt\")")
@@ -112,7 +112,10 @@ func printUsage() {
 	fmt.Println("  -maxsize int    Maximum file size in bytes before splitting output to a new file(default: 10MB)")
 	fmt.Println("  -help           Show this help")
 	fmt.Println("\nExample:")
-	fmt.Println("  go run combine_files.go -dir=./my-repo -out=combined.txt -ext=py,js,md -maxsize=5242880")
+	fmt.Println("  go run main.go -dir=./my-repo -out=combined.txt -ext=py,js,md -maxsize=5242880")
+	fmt.Println("  or")
+	fmt.Println("  go run github.com/nakamurakzz/merge-repo@latest -dir=./my-repo -out=combined.txt -ext=py,js,md -maxsize=5242880")
+	fmt.Println("")
 }
 
 func getNextFileName(baseFileName string, sequenceNum int) string {
